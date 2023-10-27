@@ -8,7 +8,6 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import LabelEncoder
 import random
 import nltk
-nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 import string
 import json
