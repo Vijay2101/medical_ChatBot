@@ -1,4 +1,4 @@
-streamlit==0.90.0
-tensorflow==2.5.0
-scikit-learn==0.24.2
-nltk==3.6.2
+streamlit
+tensorflow
+scikit-learn
+nltk
