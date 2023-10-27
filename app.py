@@ -8,10 +8,11 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 from sklearn.preprocessing import LabelEncoder
 import random
 import nltk
+nltk.download('punkt')
 from nltk.tokenize import word_tokenize
 import string
 import json
-import tensorflow as tf
+import random
 
 
 
@@ -47,7 +48,7 @@ with open('labelEncoder.pkl', 'rb') as handle:
 
 
 
-import random
+
 def generate_answer(query):
   texts = []
   pred_input = query
@@ -63,8 +64,6 @@ def generate_answer(query):
   response_tag = labelEncoder.inverse_transform([output])[0]
   return random.choice(responses[response_tag])
 
-# if "medical_model" not in st.session_state:
-#     st.session_state.medical_model = []
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -73,10 +72,6 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         
-    # with st.chat_message(a["role"]):
-    #     st.markdown(a["content"])
-
-
         
 
 
