@@ -13,6 +13,13 @@ import string
 import json
 import random
 
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 
 
@@ -63,6 +70,8 @@ def generate_answer(query):
   response_tag = labelEncoder.inverse_transform([output])[0]
   return random.choice(responses[response_tag])
 
+
+st.title("Medical ChatBot")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
