@@ -80,7 +80,15 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         
-        
+suggestion1 = "I have fever"
+submit1 = st.button(suggestion1) 
+
+suggestion2 = "How to cure headache"
+submit2 = st.button(suggestion2) 
+
+suggestion3 = "How do you treat a sprain?"
+submit3 = st.button(suggestion3) 
+       
 
 
 if prompt := st.chat_input("What is up?"):
@@ -97,6 +105,44 @@ if prompt := st.chat_input("What is up?"):
         st.session_state.messages.append({"role": "assistant", "content": ans})
         # st.session_state.medical_model.append({"role": "assistant", "content": ans})
         
+if submit1:
+  st.session_state.messages.append({"role": "user", "content": suggestion1})
+  
+  
+  with st.chat_message("user"):
+      st.markdown(suggestion1)
+
+  with st.chat_message("assistant"):
+      ans = generate_answer(suggestion1)
+      print(ans)  
+      st.markdown(ans)
+      st.session_state.messages.append({"role": "assistant", "content": ans})
+        
+if submit2:
+  st.session_state.messages.append({"role": "user", "content": suggestion2})
+  
+  
+  with st.chat_message("user"):
+      st.markdown(suggestion2)
+
+  with st.chat_message("assistant"):
+      ans = generate_answer(suggestion2)
+      print(ans)  
+      st.markdown(ans)
+      st.session_state.messages.append({"role": "assistant", "content": ans})
+
+if submit3:
+  st.session_state.messages.append({"role": "user", "content": suggestion3})
+  
+  
+  with st.chat_message("user"):
+      st.markdown(suggestion3)
+
+  with st.chat_message("assistant"):
+      ans = generate_answer(suggestion3)
+      print(ans)  
+      st.markdown(ans)
+      st.session_state.messages.append({"role": "assistant", "content": ans})
 
 
 
