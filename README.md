@@ -8,7 +8,8 @@ This is a simple chatbot application built using Streamlit and TensorFlow/Keras.
 
 You can also access a live demo of the Medical Chatbot App by clicking [here](https://med-chatbot.streamlit.app/).
 
-![Example Image](https://drive.google.com/file/d/1wibQJlPENgWt5Wy-8JNqhdRnfQ2hrGFg/view?usp=drive_link)
+![Home]('Screenshot from 2024-04-25 22-34-36.png')
+![Search]('Screenshot from 2024-04-25 22-34-56.png')
 
 ## Features
 
