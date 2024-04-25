@@ -80,11 +80,13 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
         
-suggestion1 = "I have fever"
-submit1 = st.button(suggestion1) 
+
 
 suggestion2 = "How to cure headache"
 submit2 = st.button(suggestion2) 
+
+suggestion1 = "I have fever"
+submit1 = st.button(suggestion1) 
 
 suggestion3 = "How do you treat a sprain?"
 submit3 = st.button(suggestion3) 
